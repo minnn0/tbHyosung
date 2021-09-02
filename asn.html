@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>효성태블릿</title>
+    <link rel="stylesheet" href="css/common.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+</head>
+<body>
+    <header id="header">
+        <div class="header_inner">
+            <a class="btn_open" href="#"><i class="fas fa-bars"></i><span class="blind">메뉴열기</span></a>
+            <!-- <aside class="gnb_box">
+                <ul>
+                    <li class="depth1">
+                        <a href="#"><i class="xi-desktop"></i>공통화면</a>
+                        <div class="btn_wrap">
+                            <a class="btn_gnb" href="checksheets.html">체크시트</a>
+                            <a class="btn_gnb" href="defective.html">불량상세</a>
+                        </div>
+                    </li>
+                    <li class="depth1">
+                        <a href="#"><i class="xi-folder-open"></i>메뉴리스트</a>
+                        <div class="btn_wrap">
+                            <div class="btn_thirds">
+                                <a class="btn_gnb" href="process.html">공정이동</a>
+                                <a class="btn_gnb" href="center.html">분배센터</a>
+                                <a class="btn_gnb" href="contractor_load.html">업체상차</a>
+                            </div>
+                            <a class="btn_gnb" href="#">작업시작</a>
+                            <a class="btn_gnb" href="bom.html">BOM조회</a>
+                            <div class="btn_thirds">
+                                <a class="btn_gnb" href="#">생산실적</a>
+                                <a class="btn_gnb" href="#">공정검사I</a>
+                                <a class="btn_gnb" href="#">공정검사II</a>
+                            </div>
+                            <a class="btn_gnb" href="#">부품교체</a>
+                            <a class="btn_gnb" href="#">전용작업</a>
+                            <a class="btn_gnb" href="#">재작업</a>
+                            <a class="btn_gnb" href="#">TTAPE SN</a>
+                            <a class="btn_gnb" href="epp_check.html">EPP 체크</a>
+                            <a class="btn_gnb" href="#">EPP 인증</a>
+                            <a class="btn_gnb" href="aging_in.html">AGING룸-입고</a>
+                            <a class="btn_gnb" href="#">AGING룸-출고</a>
+                            <div class="btn_thirds">
+                                <a class="btn_gnb" href="#">개별박스</a>
+                                <a class="btn_gnb" href="#">박스등록</a>
+                                <a class="btn_gnb" href="#">출하검사</a>
+                            </div>
+                            <div class="btn_thirds">
+                                <a class="btn_gnb" href="#">포장실적</a>
+                                <a class="btn_gnb" href="container_load.html">컨테이너</a>
+                                <a class="btn_gnb" href="#">재고조사</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </aside> -->
+            <h1 class="logo"><img src="images/logo.png" alt=""><span class="blind">로고</span></h1>
+            <div class="right_btn">
+                <a class="btn_bell" href="#">
+                    <i class="far fa-bell"></i>
+                    <span class="blind">메뉴열기</span>
+                    <div class="count">0</div>
+                </a>
+                <a class="btn_logout" href="#"><i class="fas fa-sign-out-alt"></i><span class="blind">메뉴열기</span></a>
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <div class="page_hd">
+            <div class="left_page_hd">
+                <h2 class="tit">MOS</h2>
+                <div class="location">
+                    <a href="#">Home</a>
+                    <a href="#">1depth</a>
+                    <a class="on" href="#">2depth</a>
+                </div>
+            </div>
+            <button class="btn_fold btn_filter_fold" type="button">
+                <i class="fas fa-chevron-down"></i>
+            </button>
+        </div>
+        <div class="contents">
+            <div class="input_box">
+                <div class="input_wrap">
+                    <p class="tit">입고예정일자</p>
+                    <input type="text">
+                </div>
+                <div class="input_wrap btn_input">
+                    <p class="tit">입고번호</p>
+                    <input type="text" placeholder="-">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </div>
+                <div class="input_wrap col2">
+                    <p class="tit">품번</p>
+                    <input type="text" placeholder="-">
+                </div>
+                <div class="input_wrap col2">
+                    <p class="tit">입고예정일자</p>
+                    <input type="text" placeholder="-">
+                </div>
+                <button class="btn_search" type="submit">검색</button>
+            </div>
+            <div class="grid_wrap">
+                <h3><i class="fas fa-bars"></i>입고리스트</h3>
+                <div class="grid">
+                </div>
+            </div>
+            <div class="btn_wrap">
+                <button class="btn btn_gray" type="button">닫기</button>
+                <button class="btn btn_sky" type="button">취소</button>
+                <button class="btn btn_white" type="button">임시저장</button>
+                <button class="btn btn_blue" type="button">저장</button>
+            </div>
+            <div class="dimm"></div>
+            <div class="modal_pop">
+                <div class="top_modal">
+                    <h3 class="modal_tit">ASN 입고 상세보기</h3>
+                    <a class="btn_close" href="#"><img src="images/modal_close.png" alt="창 닫기"></a>
+                </div>
+                <div class="input_box">
+                    <div class="input_wrap">
+                        <p class="tit">매입처 코드</p>
+                        <input type="text" placeholder="-">
+                    </div>
+                    <div class="input_wrap">
+                        <p class="tit">매입처명</p>
+                        <input type="text" placeholder="-">
+                    </div>
+                    <div class="input_wrap">
+                        <p class="tit">Pallet ID</p>
+                        <input type="text" placeholder="-">
+                    </div>
+                    <div class="input_wrap">
+                        <p class="tit">품목코드</p>
+                        <input type="text" placeholder="-">
+                    </div>
+                    <div class="input_wrap">
+                        <p class="tit">품목명</p>
+                        <input type="text" placeholder="-">
+                    </div>
+                    <div class="input_wrap">
+                        <p class="tit">입고존</p>
+                        <input type="text" placeholder="-">
+                    </div>
+                    <div class="input_wrap">
+                        <p class="tit">로케이션</p>
+                        <input type="text" placeholder="-">
+                    </div>
+                    <div class="input_wrap">
+                        <p class="tit">입고번호</p>
+                        <input type="text" placeholder="-">
+                    </div>
+                    <div class="input_wrap col2">
+                        <p class="tit">가입고량</p>
+                        <input type="text" placeholder="-">
+                    </div>
+                    <div class="input_wrap col2">
+                        <p class="tit">예정수량</p>
+                        <input type="text" placeholder="-">
+                    </div>
+                </div>
+                <div class="fold_input_box">
+                    <div class="fold_tit">
+                        <a class="btn_fold" href="#">QC 정보1<i class="fas fa-chevron-down"></i></a>
+                    </div>
+                    <div class="input_box">
+                        <div class="input_wrap col3">
+                            <p class="tit">검사여부</p>
+                            <input type="text" placeholder="유검사">
+                        </div>
+                        <div class="input_wrap col3">
+                            <p class="tit">결과</p>
+                            <input type="text" placeholder="-">
+                        </div>
+                        <div class="input_wrap col3">
+                            <p class="tit">수량</p>
+                            <input type="text" placeholder="-">
+                        </div>
+                        <div class="input_wrap">
+                            <p class="tit">로케이션</p>
+                            <input type="text" placeholder="-">
+                        </div>
+                        <div class="input_wrap">
+                            <p class="tit">입고량</p>
+                            <input type="text" placeholder="-">
+                        </div>
+                        <div class="input_wrap">
+                            <p class="tit">사유</p>
+                            <input type="text" placeholder="-">
+                        </div>
+                    </div>
+                </div>
+                <div class="fold_input_box">
+                    <div class="fold_tit">
+                        <a class="btn_fold" href="#">QC 정보2<i class="fas fa-chevron-down"></i></a>
+                    </div>
+                    <div class="input_box">
+                        <div class="input_wrap col3">
+                            <p class="tit">검사여부</p>
+                            <input type="text" placeholder="유검사">
+                        </div>
+                        <div class="input_wrap col3">
+                            <p class="tit">결과</p>
+                            <input type="text" placeholder="-">
+                        </div>
+                        <div class="input_wrap col3">
+                            <p class="tit">수량</p>
+                            <input type="text" placeholder="-">
+                        </div>
+                        <div class="input_wrap half">
+                            <p class="tit">로케이션</p>
+                            <input type="text" placeholder="-">
+                        </div>
+                        <div class="input_wrap half">
+                            <p class="tit">입고량</p>
+                            <input type="text" placeholder="-">
+                        </div>
+                        <div class="input_wrap half">
+                            <p class="tit">사유</p>
+                            <input type="text" placeholder="-">
+                        </div>
+                    </div>
+                </div>
+                <div class="btn_wrap">
+                    <button class="btn btn_gray" type="button">닫기</button>
+                    <button class="btn btn_sky" type="button">취소</button>
+                    <button class="btn btn_white" type="button">임시저장</button>
+                    <button class="btn btn_blue" type="button">저장</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/main.js?v=<?php echo time(); ?>"></script>
+</body>
+</html>
