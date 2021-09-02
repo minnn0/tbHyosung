@@ -145,6 +145,8 @@ body {min-width: 320px; min-height: 320px;}
 
 /* --------------------- 메인 화면 ------------------------- */
 
+.main_container .page_hd {border-bottom: 1px solid #ddd;}
+.main_container .page_hd .left_page_hd {border-bottom: none;}
 .main_container .page_hd .location {margin-left: 8px;}
 .main_container .contents {padding: 25px 20px; background: #f8fafb; height: calc(100vh - 90px);}
 .main_container .main_dash { display: flex; flex-wrap: wrap; justify-content: space-between; align-content: space-between; height: 100%; }
